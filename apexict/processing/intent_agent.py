@@ -13,14 +13,22 @@ class QueryNormalizer:
         You are an expert in ICT (Inner Circle Trader) concepts.
         A user is asking a question. 
         
-        RULE 1: If the question is a greeting (e.g., "hi", "how are you"), casual conversation, or completely unrelated to trading, finance, or ICT, you MUST output EXACTLY this phrase and nothing else: NON_TRADING_QUERY
-        
-        RULE 2: If it IS related to trading, translate their question into a clean, highly specific search query using exact ICT terminology (e.g., Fair Value Gap, Liquidity Sweep, Judas Swing, Midnight Open). Only output the optimized search query, nothing else. Do not include quotes.
+        RULE 1: If the question is a greeting or completely unrelated to trading, output EXACTLY: NON_TRADING_QUERY
+        RULE 2: If it IS related to trading, translate it into a highly specific search query using exact ICT terminology.
+        RULE 3: DO NOT add any notes, explanations, apologies, or conversational text. Output ONLY the search terms.
+
+        Example 1:
+        User: "when market takes equal highs then reversal?"
+        Output: Liquidity Sweep of Relative Equal Highs (EQH) leading to Market Structure Shift (MSS)
+
+        Example 2:
+        User: "what happens at midnight?"
+        Output: NY Midnight Open (00:00 EST) Judas Swing
 
         User Query: "{raw_query}"
         Output:
         """
-        
+                
         try:
             response = requests.post(self.ollama_url, json={
                 "model": self.model,
