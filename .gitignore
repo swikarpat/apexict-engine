@@ -1,0 +1,26 @@
+# Python Environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Security & Secrets (CRITICAL)
+cookies.txt
+.env
+
+# Databases & Trackers
+ict_qdrant_db/
+temp_subs/
+completed_videos.txt
+
+# Next.js Frontend
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+
+# IDE & OS Files
+.vscode/
+.idea/
+.DS_Store
