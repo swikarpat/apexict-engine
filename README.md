@@ -11,9 +11,11 @@ ApexICT is a 100% local, private RAG (Retrieval-Augmented Generation) search eng
 
 It allows non-native English speakers to ask casual trading questions, normalizes them into strict ICT terminology using a local LLM, and returns exact, clickable video timestamps embedded directly in a Next.js Command Center.
 
----
+## 🚀 AI/ML Enterprise Distributed ICT YouTube Videos Architecture
 
-## 🚀 Core Architecture
+<p align="center">
+  <img src="architecture.svg" alt="Enterprise Architecture" width="100%"/>
+</p>
 
 ### 1. 📥 Stealth Ingestion Pipeline
 * Bypasses YouTube JS Bot Challenges using `yt-dlp` and authenticated cookie sessions.
